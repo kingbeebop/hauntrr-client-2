@@ -23,7 +23,6 @@ function HouseCard({ house, onDelete, onClick }) {
           <div className="content">
             <div className="header">
               {house.name}
-              <i className={botTypeClasses[bot.bot_class]} />
             </div>
             <div className="location">
                 {house.location}

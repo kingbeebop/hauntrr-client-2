@@ -4,7 +4,7 @@ import { Route } from 'react-router-dom'
 import GhostPage from './GhostPage'
 import HouseCard from './HouseCard'
 
-function HomePage(){
+function HomePage({ onDelete }){
 
     const [houses, setHouses] = useState([])
     const [currentHouse, setCurrentHouse] = useState({})

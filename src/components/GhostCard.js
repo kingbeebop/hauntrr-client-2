@@ -25,7 +25,6 @@ function GhostCard({ ghost, onDelete, onClick }) {
         <div className="content">
           <div className="header">
             {ghost.name}
-            <i className={botTypeClasses[bot.bot_class]} />
           </div>
         </div>
         <div className="extra content">

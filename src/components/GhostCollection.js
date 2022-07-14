@@ -1,5 +1,5 @@
 import React from "react";
-import BotCard from "./GhostCard"
+import GhostCard from "./GhostCard"
 
 function GhostCollection({ ghosts, onDelete, onClick }) {
   // Your code here

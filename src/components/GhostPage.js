@@ -5,17 +5,21 @@ import GhostSpecs from "./GhostSpecs"
 import SortBar from "./SortBar"
 // import FilterBar from "./FilterBar"
 
-function GhostPage({ ghosts, house }) {
+function GhostPage({ house }) {
   ////start here with your code for step one
   //declare state variables for bots and army
 
-  const [haunting, setHaunting] = useState([])
+  const [haunting, setHaunting] = useState(house.ghosts)
+  const [ghosts, setGhosts] = useState([])
 
   //state for storing selected bot
   const [selectedGhost, setSelectedGhost] = useState([])
 
   useEffect(()=>{
-    setHaunting(house.ghosts)
+
+    fetch('http://localhost:9292/ghosts')
+    .then(res=>res.json)
+    .then(data=>setGhosts(data))
   },[])
 
   // use effect to load bot data into bots on render
@@ -44,7 +48,7 @@ function GhostPage({ ghosts, house }) {
     })
     }
 
-  function handleAddHaunting(bot){
+  function handleAddHaunting(ghost){
 
     //kind of a patchwork solution, could be cleaned up to remove
     //neccessity for redunant variable, but I wanted to keep original
@@ -96,14 +100,14 @@ function GhostPage({ ghosts, house }) {
   }
 
   function sortByDistance(){
-    setBots([...ghosts].sort((a, b) => (a.distance > b.distance) ? 1 : -1))
+    setGhosts([...ghosts].sort((a, b) => (a.distance > b.distance) ? 1 : -1))
   }
 
 
   return (
     <div>
       <Hauntings
-      ghosts={hauntings}
+      ghosts={haunting}
       onDelete={handleRemoveHaunting}
       onClick={handleRemoveHaunting}/>
 
