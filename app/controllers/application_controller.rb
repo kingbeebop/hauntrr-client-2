@@ -7,7 +7,7 @@ class ApplicationController < Sinatra::Base
     end
 
     get "/ghosts" do
-        Ghost.all.to_json
+        Ghost.all.to_json(include: :houses)
     end
 
     get "/houses" do

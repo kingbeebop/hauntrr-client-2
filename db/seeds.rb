@@ -19,7 +19,7 @@ User.create(name: "Alex", password: "password", is_ghost: FALSE)
 puts "🌱 Seeding ghosts..."
 
 Ghost.create(name: "Casper", picUrl: "https://upload.wikimedia.org/wikipedia/en/thumb/4/42/Casper_%28character%29.png/220px-Casper_%28character%29.png", user_id: User.all[0].id)
-Ghost.create(name: "Gengar", picUrl: "https://archives.bulbagarden.net/media/upload/thumb/4/4d/Ash_Gengar.png/1200px-Ash_Gengar.png", user_id: User.all[1].id)
+Ghost.create(name: "Gengar", picUrl: "https://archives.bulbagarden.net/media/upload/thumb/c/c6/094Gengar.png/250px-094Gengar.png", user_id: User.all[1].id)
 Ghost.create(name: "Slimer", picUrl: "https://static.wikia.nocookie.net/ghostbusters/images/8/87/SlimergbBR003bio.png/revision/latest?cb=20121006042628", user_id: User.all[2].id)
 Ghost.create(name: "King Hamlet", picUrl: "https://cdn.mos.cms.futurecdn.net/GNzSXxmahE7eph7AXQbLCD-970-80.jpg", user_id: User.all[3].id)
 Ghost.create(name: "The Flying Dutchman", picUrl: "https://external-preview.redd.it/Agr838yC38Ip2skS7mpPR99jIG4TO4ttMpvgbda5vhU.jpg?width=640&crop=smart&auto=webp&s=f169227c235284bb68ab947436a07a0ae4e64902", user_id: User.all[4].id)
